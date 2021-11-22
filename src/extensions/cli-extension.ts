@@ -55,7 +55,7 @@ class Facebook {
     })
   }
 
-  async login(profile) {
+  async login(profile?) {
     const cookies = await this.getPuppeteerCookies(profile)
     const tokens = await this.getAsyncToken(cookies)
     return tokens
